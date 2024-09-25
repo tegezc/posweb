@@ -1,0 +1,13 @@
+name: Delete Old Artifacts
+on:
+  schedule:
+    - cron: '0 0 * * 1'  # Run every Monday at midnight
+
+jobs:
+  delete-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete artifacts older than 7 days
+        uses: actions/delete-artifacts@v3
+        with:
+          retention-days: 7
