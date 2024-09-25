@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Selamat datang, {{ user.first_name }} {{ user.last_name }}!</h1>
+    <p>Email: {{ user.email }}</p>
+    <p>Nomor Telepon: {{ user.phone_number }}</p>
+
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>
