@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+</head>
+<body>
+    <h1>List of Products</h1>
+
+    <!-- Link to Add New Product -->
+    <a href="{% url 'add_product' %}">Add New Product</a> 
+
+    <ul>
+        {% for product in products %}
+        <li>{{ product.name }} - {{ product.price }}</li>
+        {% empty %}
+        <li>No products available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

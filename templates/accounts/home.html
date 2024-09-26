@@ -8,6 +8,10 @@
     <p>Email: {{ user.email }}</p>
     <p>Nomor Telepon: {{ user.phone_number }}</p>
 
+    <a href="{% url 'product_list' %}">Lihat Semua Produk</a>
+
+    <br>
+
     <a href="{% url 'logout' %}">Logout</a>
 </body>
 </html>
